@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_dropdown_menus",
+  "info": {
+    "displayName": "DropdownMenu",
+    "icon": "arrowDown",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "menu": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::menu.menu"
+    }
+  }
+}

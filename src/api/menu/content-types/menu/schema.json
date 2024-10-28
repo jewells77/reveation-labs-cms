@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menus",
+  "info": {
+    "singularName": "menu",
+    "pluralName": "menus",
+    "displayName": "Menu",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "dropdownMenus": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::dropdown-menu.dropdown-menu",
+      "inversedBy": "menus"
+    },
+    "Footer": {
+      "type": "dynamiczone",
+      "components": [
+        "elements.link",
+        "elements.button"
+      ]
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
+    }
+  }
+}

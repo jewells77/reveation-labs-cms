@@ -20,7 +20,11 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images", "files", "videos"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
     },
     "siteDescription": {
       "type": "text",
@@ -30,6 +34,19 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.seo"
+    },
+    "MainMenuItems": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.dropdown-menu",
+        "elements.button",
+        "elements.link"
+      ]
+    },
+    "menus": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::menu.menu"
     }
   }
 }
